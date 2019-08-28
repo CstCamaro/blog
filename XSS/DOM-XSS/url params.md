@@ -2,7 +2,7 @@
 
 在所有的DOM-XSS中，因为从URL参数中取值而导致的DOM-XSS数量是最多的，也是最常见的一种。
 
-#### 常见对象
+### 常见对象
 ```
 location
 location.search
