@@ -24,7 +24,7 @@ OpenJDK Runtime Environment (build 1.8.0_222-8u222-b10-1ubuntu1~16.04.1-b10)
 OpenJDK 64-Bit Server VM (build 25.222-b10, mixed mode)
 ```
 
-3、配置hosts,在你的hosts文件中添加以下行
+3、配置hosts，在你的hosts文件中添加以下行
 ```
 127.0.0.1      localhost localhost.localdomain localhost4 localhost4.localdomain4
 ```
