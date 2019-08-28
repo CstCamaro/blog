@@ -20,8 +20,20 @@ getQueryString
 getRequests
 ```
 
+### 常见取值函数代码
+```javascript
+function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = location.search.substr(1).match(reg);
+            if (r != null) return unescape(decodeURI(r[2])); return null;
+        }
+```
+
 ### 常见的DOM-XSS形式
 1、将URL中的参数，进行 decodeURIComponent 或 unescape 后，写入HTML中。
+```javascript
+foo = getQueryString("foo");
+$("#foo").html(foo);
+```
 
-
-#### 小技巧
+### 小技巧
