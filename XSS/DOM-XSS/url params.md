@@ -22,11 +22,12 @@ getRequests
 
 ### 常见取值函数代码
 ```javascript
-function getQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-            var r = location.search.substr(1).match(reg);
-            if (r != null) return unescape(r[2]); return null;
-        }
+function getQueryString(name) 
+{
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
 ```
 
 ### 常见形式
@@ -56,18 +57,20 @@ catch(e){
 ### 小技巧
 当取值的字符串，是以location.search作为对象时，取值范围从?至#前，不包含#和#后的内容
 ```javascript
-function getQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-            var r = location.search.substr(1).match(reg);
-            if (r != null) return unescape(r[2]); return null;
-        }
+function getQueryString(name) 
+{
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
 ```
 当取值的字符串，是以location.href作为对象时，取值范围为整个URL，包含#和#后的内容
 ```javascript
-function getQueryString(name) {
-            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-            var r = location.href.substr(1).match(reg);
-            if (r != null) return unescape(r[2]); return null;
-        }
+function getQueryString(name) 
+{
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = location.href.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
 ```
 当使用第二种取法的时候，可以将参数写在#后，因为#后的内容无法被服务器获取，从而避开了WAF的防护
