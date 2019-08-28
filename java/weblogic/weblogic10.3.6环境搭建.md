@@ -1,4 +1,4 @@
-## weblogic环境搭建
+## weblogic 10.3.6 环境搭建
 
 ### 环境准备
 #### 操作系统
@@ -82,3 +82,44 @@ java -Xmx1024m -jar wls1036_generic.jar
 
 15、安装完成，可以使用Quick Start配置。
 ![weblogic_install_step_9.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_install_step_9.jpg)
+
+### weblogic Quick Start
+1、打开weblogic Quick Start，选择Getting start with Weblogic Server@10.3.6
+![weblogic_quick_start_step_1.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_quick_start_step_1.jpg)
+
+2、创建新域名
+![weblogic_quick_start_step_2.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_quick_start_step_2.jpg)
+
+3、选择域名类型
+![weblogic_quick_start_step_3.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_quick_start_step_3.jpg)
+
+4、自定义域名名称
+![weblogic_quick_start_step_4.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_quick_start_step_4.jpg)
+
+5、设置weblogic登录时的账号密码，在以后登录时候需要用到，密码需要符合强度规范，字母+数字
+![weblogic_quick_start_step_5.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_quick_start_step_5.jpg)
+
+6、选择JDK，默认就行
+![weblogic_quick_start_step_6.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_quick_start_step_6.jpg)
+
+7、这一步看个人需求，默认都没有勾选
+![weblogic_quick_start_step_7.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_quick_start_step_7.jpg)
+
+8、点击下一步，等待安装完成即可
+![weblogic_quick_start_step_8.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_quick_start_step_8.jpg)
+
+### 启动weblogic
+1、进入我们刚才安装的weblogic目录，此时可能会出现没有权限访问文件或文件夹的问题，chmod文件或文件夹权限即可
+```
+cd /u01/app/oracle/config/domains/camaro
+./startWebLogic.sh
+```
+
+2、打开浏览器，在地址栏访问
+```
+http://localhost:7001/console
+```
+第一次访问时，可能会出现以下界面，稍等一会儿后刷新即可
+![weblogic_first_access.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_first_access.jpg)
+当出现以下界面时，weblogic部署已经完成
+![weblogic_login.jpg](https://cstcamaro.github.io/blog/resource/img/weblogic_login.jpg)
