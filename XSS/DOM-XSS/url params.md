@@ -1,6 +1,6 @@
 ## DOM-XSS url params
 
-在所有的DOM-XSS中，因为从URL参数中取值而导致的DOM-XSS数量是最多的，也是最常见的一种。
+在所有的DOM-XSS中，因为从URL参数中取值而导致的DOM-XSS数量是最多的，也是最常见的一种
 
 ### 常见对象
 ```
@@ -36,13 +36,13 @@ var foo = getQueryString("foo");
 $("#foo").html(foo);
 ```
 
-2、将URL中的参数，作为URL地址，进行URL重定向操作。
+2、将URL中的参数，作为URL地址，进行URL重定向操作
 ```javascript
 var redirect_url = getQueryString("redirect_url");
 location.href = redirect_url;
 ```
 
-3、将URL中的参数，作为JSON解析，但使用了eval函数。
+3、将URL中的参数，作为JSON解析，但使用了eval函数
 ```javascript
 json_data = getQueryString("json_data");
 try{
