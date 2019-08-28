@@ -50,19 +50,8 @@ catch(e){
 ```
 
 ### 小技巧
-#### cookie的设置方法
-
-#### cookie属性
-document.cookie拥有一些特殊的属性
-```
-- HttpOnly
+1、HttpOnly
 当cookie的值具有`HttpOnly`属性时，只能被浏览器所使用发向服务端，而不能被js读取到。
 在http response header中，设置HttpOnly如下
-```
-Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
-```
+`Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly`
 在js中，没有任何的API可以设置cookie的HttpOnly属性。
-
-- Secure
-
-```
