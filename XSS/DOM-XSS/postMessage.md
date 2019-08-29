@@ -31,7 +31,7 @@ window.addEventListener("message", receiveMessage, false);
 ```
 
 ### 常见形式
-```
+```javascript
 function receiveMessage(event) {
     if (event.origin.indexOf("https://mysite.com") >= -1) { //判断event.origin的方式不对，导致可以使用https://a.com/https://mysite.com进行绕过，从而控制来源数据包
         eval(event.data);
@@ -41,9 +41,11 @@ window.addEventListener("message", receiveMessage, false);
 ```
 
 ### example poc
+```html
 <iframe src="https://xss.com/" onload="foo()"></iframe>
 <script>
     function foo() {
         window[0].postMessage("alert(1)", "*");
     }
 </script>
+```
